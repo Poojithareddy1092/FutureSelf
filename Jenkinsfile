@@ -27,10 +27,10 @@ pipeline {
         stage('Run Containers') {
     steps {
         bat 'docker compose down'
-        bat 'docker compose up -d --build'
+        bat 'docker compose build --no-cache'
+        bat 'docker compose up -d'
     }
 }
-
     }
 
 }

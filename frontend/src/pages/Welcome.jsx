@@ -14,7 +14,7 @@ function Welcome({ onStart }) {
                 <p>
                     Become the person you aspire to be.
                     <br />
-                    Track your actions. Reflect. Grow
+                    Track your actions. Reflect. Growww
                 </p>
 
 
