@@ -60,7 +60,7 @@ app.get("/dashboard", (req, res) => {
 
 });
 
-app.listen(5001, () => {
+app.listen(5000, () => {
 
     console.log("FutureSelf Backend Running");
 
