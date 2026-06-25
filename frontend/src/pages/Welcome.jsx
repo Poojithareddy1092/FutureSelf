@@ -7,7 +7,7 @@ function Welcome({ onStart }) {
             <div className="welcome-card">
 
                 <h1>
-                    Future Self Alignment Platform for 
+                    Future Self Alignment Platform for Georgus
                 </h1>
 
 
