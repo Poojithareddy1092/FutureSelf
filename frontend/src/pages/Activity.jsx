@@ -39,7 +39,7 @@ function Activity({ goBack }) {
     }
 
     await axios.post(
-        "http://localhost:5000/activity",
+        "http://localhost:5001/activity",
         {
     time:selectedTime,
     activity,
