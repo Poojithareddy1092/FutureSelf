@@ -5,32 +5,32 @@ pipeline {
     stages {
 
         stage('Checkout') {
-
             steps {
+                checkout scm
+            }
+        }
 
-                echo 'Checking out FutureSelf code'
 
+        stage('Stop Existing Containers') {
+            steps {
+                bat 'docker compose down'
             }
         }
 
 
         stage('Build Docker Images') {
-
             steps {
-
-                bat 'docker compose build'
-
+                bat 'docker compose build --no-cache'
             }
         }
 
 
-        stage('Run Containers') {
-    steps {
-        bat 'docker compose down'
-        bat 'docker compose build --no-cache'
-        bat 'docker compose up -d'
-    }
-}
+        stage('Start Application') {
+            steps {
+                bat 'docker compose up -d'
+            }
+        }
+
     }
 
 }
