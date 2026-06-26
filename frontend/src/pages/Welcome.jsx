@@ -7,7 +7,7 @@ function Welcome({ onStart }) {
             <div className="welcome-card">
 
                 <h1>
-                    Future Self Alignment Platform
+                    Future Self Alignment Platform v2
                 </h1>
 
 
