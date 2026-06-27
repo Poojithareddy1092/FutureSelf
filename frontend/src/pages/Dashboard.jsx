@@ -204,21 +204,22 @@ your daily alignment score.
 
             ?
 
-            <p>
-                ✅ 
-                {
-                    activities.find(
-                        (item)=>item.time === slot
-                    ).activity
-                }
-            </p>
+            <p style={{color:"green"}}>
+
+✅ {
+activities.find(
+(item)=>item.time===slot
+).activity
+}
+
+</p>
 
 
             :
 
-            <p>
-                No activity logged
-            </p>
+            <p style={{color:"#888"}}>
+⏳ Waiting...
+</p>
 
         }
 
@@ -251,27 +252,83 @@ your daily alignment score.
 
 
 
+            {/* Reflection Section */}
+
+<div className="reflection-card">
+
+    <h2>🌙 End Your Day</h2>
+
+    {
+        completedActivities === 4 ?
+
+        <>
+
+            <p>
+
+                Fantastic! You completed all your activity check-ins.
+
+                <br /><br />
+
+                Spend two minutes reflecting on your day and receive
+                guidance from your future self.
+
+            </p>
+
             <button
-                className="primary-btn"
+                className="reflection-btn"
                 onClick={goToReflection}
             >
 
-                Daily Reflection
+                ✨ Start Daily Reflection
 
             </button>
 
+        </>
 
-            <br/><br/>
+        :
 
+        <>
 
-            <button
-                className="primary-btn"
-                onClick={goToHistory}
-            >
+            <p>
 
-                View History
+                Complete today's activity check-ins to unlock
+                your daily reflection.
 
-            </button>
+            </p>
+
+            <h3>
+
+                {completedActivities}/4 Activities Completed
+
+            </h3>
+
+            <div className="progress-bar">
+
+                <div
+                    className="progress-fill"
+                    style={{
+                        width: `${completedActivities * 25}%`
+                    }}
+                ></div>
+
+            </div>
+
+        </>
+
+    }
+
+</div>
+
+<br />
+
+<button
+    className="history-btn"
+    onClick={goToHistory}
+>
+
+    📜 View History
+
+</button>
 
 
 
