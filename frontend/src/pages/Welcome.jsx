@@ -7,7 +7,7 @@ function Welcome({ onStart }) {
             <div className="welcome-card">
 
                 <h1>
-                    Future Self Alignment Platform for pooji
+                    Future Self Alignment Platform
                 </h1>
 
 
